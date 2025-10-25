@@ -27,29 +27,36 @@ body {
 }
 /* Navbar Logo Perfect Alignment Fix */
 /* Perfect Navbar Logo Alignment + Responsive Fix */
+/* Final Navbar Logo Fix — Centered + Balanced */
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  padding-top: 2px;
 }
 
 .nav-logo {
-  height: 28px;
+  height: 22px; /* ✅ perfect height balance */
   width: auto;
   object-fit: contain;
   display: block;
+  margin-top: 2px;
+  border-radius: 4px;
+  transform: translateY(2px); /* fine-tune vertical alignment */
 }
 
 .logo span {
   font-weight: 700;
   font-size: 1.25rem;
   color: white;
+  line-height: 1;
 }
 
-/* For smaller screens */
+/* Mobile Optimization */
 @media (max-width: 768px) {
   .nav-logo {
-    height: 24px;
+    height: 20px;
+    transform: translateY(1px);
   }
 
   .logo span {
