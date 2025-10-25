@@ -1,0 +1,418 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top right, #0a0a14, #000000);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 5%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 1000;
+}
+.logo {
+    display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.logo img {
+  height: 36px;
+  width: 36px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+
+}
+.logo img:hover {
+  transform: rotate(10deg) scale(1.05);
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #e5e5e5;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #00b2ff;
+}
+.signup {
+  background: linear-gradient(90deg, #007bff, #00e0ff);
+  color: white !important;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.signup:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 8rem 2rem 6rem;
+  color: #fff;
+  background: radial-gradient(circle at 30% 50%, #001229, #000);
+  background-image: url("bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0, 50, 0.8),
+    rgba(0, 0, 0, 0.9)
+  );
+  z-index: 0;
+}
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  color: #00e0ff;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(8px);
+}
+.gradient-text {
+  background: linear-gradient(90deg, #00b2ff, #9b5cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.hero p {
+  color: #cfcfcf;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+}
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.btn.primary {
+  background: linear-gradient(90deg, #007bff, #00e0ff);
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 183, 255, 0.4);
+}
+.btn.primary:hover {
+  box-shadow: 0 0 25px rgba(0, 183, 255, 0.7);
+  transform: scale(1.05);
+}
+.btn.outline {
+  border: 2px solid #00e0ff;
+  color: #00e0ff;
+  background: transparent;
+}
+.btn.outline:hover {
+  background: #00e0ff;
+  color: #fff;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  color: #00b2ff;
+}
+.hero-stats div h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+/* Why Section */
+.why {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: #070712;
+}
+.why h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.why p {
+  color: #aaa;
+}
+.why-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 183, 255, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(12px);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 35px rgba(0, 183, 255, 0.3);
+}
+
+/* Testimonials */
+.testimonials {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(180deg, #070712, #000);
+}
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.testimonial {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 350px;
+  box-shadow: 0 0 25px rgba(0, 183, 255, 0.05);
+  transition: 0.3s;
+}
+.testimonial:hover {
+  box-shadow: 0 0 30px rgba(0, 183, 255, 0.2);
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: radial-gradient(circle at top, #001129, #000);
+}
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 183, 255, 0.05);
+  backdrop-filter: blur(12px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+input,
+textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+textarea {
+  height: 120px;
+  resize: none;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: #888;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+section {
+  animation: fadeUp 0.8s ease both;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #000;
+  color: #888;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-link {
+  color: #00b2ff;
+  margin-left: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #00e0ff;
+}
+
+/* ---------- Auth Pages (Login / Signup) ---------- */
+.auth-body {
+  background: radial-gradient(circle at top, #0d0d1f, #050509);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 174, 255, 0.2);
+}
+
+.auth-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form input {
+  padding: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.auth-form input::placeholder {
+  color: #aaa;
+}
+
+.auth-form button {
+  margin-top: 1rem;
+}
+
+.auth-container p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+.auth-container a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .auth-container {
+    padding: 2rem 1.5rem;
+  }
+  .auth-container h2 {
+    font-size: 1.3rem;
+  }
+}
