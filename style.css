@@ -26,24 +26,32 @@ body {
   z-index: 1000;
 }
 .logo {
-    display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  font-size: 1.5rem;
-  color: #ffffff;
+   display: flex;
+  align-items: center; /* Vertically center the logo and text */
+  gap: 8px; /* spacing between logo and text */
 }
 .logo img {
-  height: 36px;
-  width: 36px;
-  object-fit: contain;
-  border-radius: 50%;
-  transition: transform 0.3s ease;
+  height: 36px;        /* adjust logo height */
+  width: auto;         /* keep proper proportions */
+  object-fit: contain; /* prevent stretching */
+  vertical-align: middle;
 
 }
-.logo img:hover {
-  transform: rotate(10deg) scale(1.05);
+.logo span {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: white;
 }
+@media (max-width: 768px) {
+  .logo img {
+    height: 28px;
+  }
+  .logo span {
+    font-size: 1.1rem;
+  }
+}
+
+
 .nav-links {
   display: flex;
   list-style: none;
